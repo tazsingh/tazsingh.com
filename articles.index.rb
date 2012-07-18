@@ -6,7 +6,7 @@ Vertx::EventBus.register_handler "articles.index" do |message|
     articles = []
     files_read = 0
 
-    res.to_a.reverse.each_with_index do |article, index|
+    res.to_a.reverse.each do |article|
       Vertx::FileSystem.read_file_as_buffer article do |err, response|
         articles << {
           body: Kramdown::Document.new(response.to_s).to_html,
