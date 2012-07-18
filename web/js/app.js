@@ -8,8 +8,9 @@
       content.innerHTML = "";
 
       for(var i = 0; i < reply.articles.length; i++) {
-        content.innerHTML += "<section><div class=\"date\">" +
-          moment(reply.articles[i].date * 1000).format("MMM D YYYY") + "</div>" + reply.articles[i].body + "</section>";
+        content.innerHTML += "<section><div class=\"date\">"
+          + moment(reply.articles[i].date * 1000).format("MMM D YYYY h:mma") + "</div>"
+          + reply.articles[i].body + "</section>";
       }
     });
   };
