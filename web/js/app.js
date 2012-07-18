@@ -4,7 +4,13 @@
 
   eb.onopen = function() {
     eb.send("articles.index", {}, function(reply) {
-      console.log(reply.articles);
+      var content = document.getElementById("content");
+      content.innerHTML = "";
+
+      for(var i = 0; i < reply.articles.length; i++) {
+        content.innerHTML += "<section><div class=\"date\">" +
+          moment(reply.articles[i].date * 1000).format("MMM D YYYY") + "</div>" + reply.articles[i].body + "</section>";
+      }
     });
   };
 })();

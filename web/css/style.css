@@ -73,3 +73,7 @@ div#content h1 {
   font-size: 30px;
   line-height: 35px;
 }
+
+section div.date {
+  float: right;
+}
