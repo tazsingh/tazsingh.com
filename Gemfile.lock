@@ -1,10 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    kramdown (0.13.7)
+    maruku (0.6.0)
+      syntax (>= 1.0.0)
+    syntax (1.0.0)
 
 PLATFORMS
   java
 
 DEPENDENCIES
-  kramdown
+  maruku

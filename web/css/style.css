@@ -40,9 +40,12 @@ header h1 {
   float: right;
 }
 
-header h1 a, header h1 a:hover {
-  color: #000;
+header a, header a:hover {
   text-decoration: none;
+}
+
+header a {
+  color: #000;
 }
 
 header nav {
@@ -73,6 +76,10 @@ div#content h1 {
   font-size: 30px;
   line-height: 35px;
   margin: 20px 0;
+}
+
+div#content ul {
+  padding: 0 0 0 20px;
 }
 
 section {
