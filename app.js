@@ -2,7 +2,7 @@ load("vertx.js");
 
 vertx.deployVerticle("articles.index.rb");
 
-vertx.deployVerticle("web-server", {
+vertx.deployModule("vertx.web-server-v1.0", {
   port: 8080
 , host: "localhost"
 , bridge: true
